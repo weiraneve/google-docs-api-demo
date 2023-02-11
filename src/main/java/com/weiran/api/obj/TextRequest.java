@@ -2,7 +2,7 @@ package com.weiran.api.obj;
 
 import java.util.List;
 
-public class AddTextRequest {
+public class TextRequest {
 
     List<String> texts;
 

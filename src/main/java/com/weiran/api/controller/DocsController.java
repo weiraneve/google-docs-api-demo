@@ -1,6 +1,6 @@
 package com.weiran.api.controller;
 
-import com.weiran.api.obj.AddTextRequest;
+import com.weiran.api.obj.TextRequest;
 import com.weiran.api.obj.ReadDocumentResponse;
 import com.weiran.api.service.DocsService;
 import com.google.api.services.docs.v1.model.BatchUpdateDocumentResponse;
@@ -24,7 +24,7 @@ public class DocsController {
     }
 
     @PutMapping("/{id}")
-    public BatchUpdateDocumentResponse updateDocument(@RequestBody AddTextRequest addTextRequest, @PathVariable String id) throws IOException {
-        return docsService.addText(addTextRequest,id);
+    public BatchUpdateDocumentResponse updateDocument(@RequestBody TextRequest request, @PathVariable String id) throws IOException {
+        return docsService.addText(request, id);
     }
 }

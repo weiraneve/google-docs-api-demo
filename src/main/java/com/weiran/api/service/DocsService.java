@@ -1,6 +1,6 @@
 package com.weiran.api.service;
 
-import com.weiran.api.obj.AddTextRequest;
+import com.weiran.api.obj.TextRequest;
 import com.weiran.api.obj.ReadDocumentResponse;
 import com.google.api.services.docs.v1.Docs;
 import com.google.api.services.docs.v1.model.*;
@@ -30,14 +30,14 @@ public class DocsService {
         return readDocumentResponse;
     }
 
-    public BatchUpdateDocumentResponse addText(AddTextRequest addTextRequest, String documentId) throws IOException {
+    public BatchUpdateDocumentResponse addText(TextRequest textRequest, String documentId) throws IOException {
         ReadDocumentResponse readDocumentResponse = readDocument(documentId);
         Integer startIndex = readDocumentResponse.getEndIndex() - 1;
         int endIndex;
 
         List<Request> requests = new ArrayList<>();
 
-        for (String text : addTextRequest.getTexts()) {
+        for (String text : textRequest.getTexts()) {
             InsertTextRequest insertTextRequest = new InsertTextRequest().setText(text).setLocation(new Location().setIndex(startIndex));
             endIndex = startIndex + text.length();
 
