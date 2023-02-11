@@ -20,6 +20,8 @@ target/
 *.ipr
 
 src/main/resources/service_account_key.json
+src/main/resources/credentials.json
+tokens/StoredCredential
 
 ### NetBeans ###
 /nbproject/private/
