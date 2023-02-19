@@ -8,3 +8,4 @@
 - [JavaScript quickstart](https://developers.google.com/sheets/api/quickstart/js#api-key)
 - [google docs get接口](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/batchGet)
 - [使用 OAuth 2.0 访问 Google API ](https://developers.google.com/identity/protocols/oauth2?hl=zh-cn)
+- [创建和管理服务帐号密钥](https://cloud.google.com/iam/docs/creating-managing-service-account-keys?hl=zh-cn)
